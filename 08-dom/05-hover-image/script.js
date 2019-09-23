@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  let img = document.getElementsByTagName("img")[0];
+  img.addEventListener("mouseover", RespondMouseOver);
+
+  function RespondMouseOver() {
+    img.src = img.getAttribute("data-hover");
+  }
 })();

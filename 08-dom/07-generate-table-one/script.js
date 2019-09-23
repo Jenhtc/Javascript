@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  let table = document.createElement("table");
+  document.getElementById("target").appendChild(table);
+  /* let tr = document.createElement("tr");
+  table.appendChild(tr); */
+  for (let i = 0; i < 10; i++) {
+    let row = document.createElement("tr");
+    table.appendChild(row);
+    table.setAttribute("border", "2");
+    row.innerHTML = "Bro";
+  }
 })();

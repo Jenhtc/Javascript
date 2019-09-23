@@ -19,9 +19,9 @@
       return this.firstName + " " + this.lastName;
     }
     set fullName(name) {
-      let words = name.toString().split(" ");
-      this.firstName = words[0] || "";
-      this.lastName = words[1] || "";
+      [this.firstName, this.lastName] = name.toString().split(" ");
+      /*    this.firstName = words[0] || "";
+      this.lastName = words[1] || ""; */
     }
   }
   document.getElementById("run").addEventListener("click", () => {

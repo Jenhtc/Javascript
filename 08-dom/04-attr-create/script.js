@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  let recup = document.getElementById("source").getAttribute("data-image");
+  let img = document.createElement("img");
+  img.src = recup;
+  let src = document.getElementById("target");
+  src.appendChild(img);
+  var element = document.getElementById("source");
+  element.parentNode.removeChild(element);
 })();

@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    let mdp1 = document.getElementById("pass-one");
+    let mdp2 = document.getElementById("pass-two");
+    if (mdp1.value == mdp2.value && (mdp1.value != "" || mdp2.value != ""))
+      alert("Mots de passe identiques !");
+    else {
+      mdp1.style.borderColor = "red";
+      mdp2.style.borderColor = "red";
+    }
+  });
 })();
