@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    window.lib.getPosts(callback);
+  });
+  function callback(error, table) {
+    if (error == null) console.log(table);
+    else console.log("Error. Not possible to get the articles list");
+  }
 })();

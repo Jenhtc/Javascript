@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("pass-one").addEventListener("input", () => {
+    let mdp = document.getElementById("pass-one");
+    document.getElementById("counter").innerHTML = mdp.value.length + "/10";
+    if (mdp.value.length >= 10) {
+      alert("Trop long !");
+    }
+  });
 })();
