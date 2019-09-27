@@ -22,3 +22,5 @@
     console.log(p);
   });
 })();
+
+async/await utilisent promesses 

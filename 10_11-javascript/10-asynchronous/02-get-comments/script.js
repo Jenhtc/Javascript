@@ -21,3 +21,10 @@
     });
   });
 })();
+
+
+15. let postsProcessed = 0;
+
+if (++postsProcessed === postsProcessed.length) {
+  console.log(posts)
+}

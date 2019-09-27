@@ -18,3 +18,8 @@
     else console.log("Error. Not possible to get the articles list");
   }
 })();
+
+----------------------------------------
+window.lib.getPosts((err, posts) => {
+  console.log(err, posts);
+});

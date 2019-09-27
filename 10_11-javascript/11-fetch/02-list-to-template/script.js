@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", async () => {
+    const response = await fetch("http://localhost:3000/heroes");
+    const myOldJson = await response.json();
+    console.log(JSON.stringify(myOldJson));
+    let target = document.getElementById("target");
+
+    var temp, item, a, i;
+
+    temp = document.getElementsByTagName("template")[0];
+
+    item = temp.content.querySelector("li");
+
+    for (i = 0; i < myOldJson.length; i++) {
+      temp.content.querySelector("strong").textContent = myOldJson[i].name;
+      temp.content.querySelector("em").textContent = myOldJson[i].alterEgo;
+      temp.content.querySelector("p").textContent = myOldJson[i].abilities;
+      a = document.importNode(item, true);
+
+      // Append the new node wherever you like:
+      target.appendChild(a);
+    }
+  });
 })();

@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+function (post) {
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(post),
+        headers: new Headers({'Content-Type': 'application/json'})
+    }
+}
 })();
